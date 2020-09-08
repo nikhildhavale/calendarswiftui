@@ -11,7 +11,6 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var calendarModel:CalendarModel
     var body: some View {
-        //PageView(
         VStack
             {
                 HStack{
