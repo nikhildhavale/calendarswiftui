@@ -22,10 +22,10 @@ struct ContentView: View {
                     }, label: {
                         Image(systemName: "chevron.left.circle")
                     })
-                    Text(calendarModel.monthString)/*.frame(minWidth: 0,
+                    Text(calendarModel.monthString).frame(minWidth: 0,
                      maxWidth: .infinity,
                      minHeight: 0,
-                     maxHeight: .infinity)*/
+                     maxHeight: 20)
                     Button<Image>(action: {
                         let date  = self.calendarModel.date
                         self.calendarModel.navigationDirection = .forward
@@ -34,7 +34,7 @@ struct ContentView: View {
                     }, label: {
                         Image(systemName: "chevron.right.circle")
                     })
-                }
+                }.padding([.leading,.trailing], 20)
                 
                 PageView(
                     List
